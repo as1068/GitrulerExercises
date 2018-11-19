@@ -1,0 +1,58 @@
+  {
+    "setup-files": [],
+    "rules":[
+    {
+      "rule": "ignored",
+      "path": "files/tv shows/any.xml",
+      "alternative-title": "Git ignores all XML files in files/tv shows'",
+      "score-if-correct": 15
+    },
+    { "rule": "any-commit-message-contains",
+      "contents": "Ignore XML Files",
+      "ignore-case": true,
+      "alternative-title":"A commit was made with the message 'Ignore XML Files'",
+      "score-if-correct":15
+      },
+    {
+      "rule": "branch-exists",
+      "branch": "new-branch-1",
+      "score-if-correct": 15,
+      "alternative-title": "'New-branch-1' branch has been created."
+    },
+        {
+      "rule": "file-contains-in-branch",
+      "branch": "new-branch-1",
+      "path": "files/basketball.txt",
+      "contents": "Boston Celtics",
+      "ignore-case": true,
+      "score-if-correct": 10,
+      "alternative-title": "'Boston Celtics' was added to the basketball file in 'new-branch-1'."
+    },
+    {
+      "rule": "commit-with-message-was-made-on-branch",
+      "branch": "new-branch-1",
+      "contents": "NBA Champions 2019",
+      "ignore-case": true,
+      "score-if-correct": 10,
+      "alternative-title": "Changes to the basketball file were made on the new branch."
+    },
+    {
+      "rule": "file-contains-in-branch",
+      "branch": "master",
+      "path": "files/basketball.txt",
+      "contents": "Boston Celtics",
+      "ignore-case": true,
+      "score-if-correct": 15,
+      "alternative-title": "The basketball file has been merged into the 'master' branch."
+    },
+     {
+      "rule": "commit-with-message-was-merged-into-branch",
+      "branch": "master",
+      "contents": "NBA Champions 2019",
+      "ignore-case": true,
+      "score-if-correct": 10,
+      "alternative-title": "The commit that added the Boston Celtics to the basketball file has been merged into the 'master' branch."
+    }
+    
+    ]
+  }
